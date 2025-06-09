@@ -3,26 +3,8 @@ import {  ReactNode } from 'react'
 
 export type SwipeDirection = 'right' | 'left' | 'up' | 'down'
 
-export interface SwiperState {
-  disabled: boolean
-  disabledRedo: boolean
-  disabledUndo: boolean
-}
-
-export enum SwiperActionTypes {
-  SET_DISABLED = 'SET_DISABLED',
-  SET_REDO_DISABLED = 'SET_REDO_DISABLED',
-  SET_UNDO_DISABLED = 'SET_UNDO_DISABLED',
-}
-
-export type SwiperAction =
-  | { type: SwiperActionTypes.SET_DISABLED; payload: boolean }
-  | { type: SwiperActionTypes.SET_REDO_DISABLED; payload: boolean }
-  | { type: SwiperActionTypes.SET_UNDO_DISABLED; payload: boolean }
-
 export type SwipeType = {
   direction: SwipeDirection
-  id: number
   children: ReactNode
 }
 
