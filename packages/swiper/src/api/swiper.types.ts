@@ -1,5 +1,5 @@
-import { MotionValue, PanInfo } from 'framer-motion'
-import { Dispatch, ReactNode, SetStateAction } from 'react'
+import { MotionValue, PanInfo } from 'motion/react'
+import {  ReactNode } from 'react'
 
 export type SwipeDirection = 'right' | 'left' | 'up' | 'down'
 
@@ -45,5 +45,5 @@ export type SwiperContextType = {
 
 export type SwiperActionsType = {
   handleSwipe: (direction: SwipeDirection) => void
-  onDrag?: (_e: any, info: PanInfo) => void
+  onDrag?: (event: PointerEvent, info: PanInfo) => void
 }

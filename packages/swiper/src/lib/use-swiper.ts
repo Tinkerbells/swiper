@@ -10,7 +10,6 @@ import { SwiperRef } from '../ui'
 const reducer = (state: SwiperState, action: SwiperAction): SwiperState => {
   switch (action.type) {
     case SwiperActionTypes.SET_DISABLED:
-      console.log('@payload: ', action.payload)
       return { ...state, disabled: action.payload }
     case SwiperActionTypes.SET_REDO_DISABLED:
       return { ...state, disabledRedo: action.payload }

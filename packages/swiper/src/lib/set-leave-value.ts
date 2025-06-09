@@ -1,4 +1,4 @@
-import { MotionValue } from 'framer-motion'
+import { MotionValue } from 'motion/react'
 import { SwipeDirection } from '../api'
 
 export const setleaveValue = (

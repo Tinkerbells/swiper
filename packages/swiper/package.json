@@ -1,7 +1,7 @@
 {
-  "name": "@tinkerbells/react-swiper",
+  "name": "@tinkerbells/swipify",
   "version": "1.0.0",
-  "description": "Tinder-style swipe component for React built with Motion One",
+  "description": "Tinder-style swipe component for React built with Motion",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -28,11 +28,11 @@
     "swiper",
     "tinder",
     "swipe",
-    "motion-one",
+    "motion",
     "animation",
     "typescript"
   ],
-  "author": "Your Name",
+  "author": "Tinkerbells",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -47,15 +47,11 @@
     "motion": "^12.16.0"
   },
   "devDependencies": {
-    "@tinkerbells-swiper/eslint-config": "workspace:*",
+    "@swipify/eslint-config": "workspace:*",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react": "^7.32.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint": "^9.0",
     "typescript": "^5.1.0",
     "vite": "^4.4.0",
     "vite-plugin-dts": "^3.5.0"

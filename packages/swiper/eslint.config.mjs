@@ -1,3 +1,3 @@
-import { eslintConfig } from '@xenon/eslint-config/base'
+import { eslintConfig } from '@tinkerbells-react-swiper/eslint-config/base'
 
 export default eslintConfig

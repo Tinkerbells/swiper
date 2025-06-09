@@ -49,14 +49,14 @@ export const SwiperItem = forwardRef<HTMLDivElement, SwiperItemProps>(
     )
 
     const handleDrag = useCallback(
-      (_e: any, info: PanInfo) => {
-        onDrag && onDrag(_e, info)
+      (event: PointerEvent, info: PanInfo) => {
+        onDrag && onDrag(event, info)
       },
       [onDrag],
     )
 
     const onDragEnd = useCallback(
-      (_e: any, info: PanInfo) => {
+      (_event: PointerEvent, info: PanInfo) => {
         const { offset } = info
         const direction = getDirection(offset, offsetBoundary * 2) // Multiple because function divide by two
         switch (direction) {
@@ -91,7 +91,7 @@ export const SwiperItem = forwardRef<HTMLDivElement, SwiperItemProps>(
     return (
       <SwiperItemContext.Provider value={value}>
         <motion.div
-          onAnimationStart={() => console.log('@')}
+          onAnimationStart={props.onAnimationStart}
           drag
           ref={ref}
           animate={{ scale: 1 }}

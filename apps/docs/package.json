@@ -15,7 +15,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@tinkerbells-swiper/eslint-config": "workspace:*",
+    "@swipify/eslint-config": "workspace:*",
+    "@swipify/typescript-config": "workspace:*",
     "@storybook/addon-actions": "^8.2.6",
     "@storybook/addon-essentials": "^8.2.6",
     "@storybook/addon-links": "^8.2.6",
@@ -25,7 +26,6 @@
     "eslint": "^8.57.0",
     "serve": "^14.2.1",
     "storybook": "^8.2.6",
-    "@tinkerbells-swiper/typescript-config": "workspace:*",
     "typescript": "5.5.4",
     "vite": "^5.1.4"
   }

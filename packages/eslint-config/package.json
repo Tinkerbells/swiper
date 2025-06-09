@@ -1,5 +1,5 @@
 {
-  "name": "@tinkerbells-swiper/eslint-config",
+  "name": "@swipify/eslint-config",
   "version": "0.0.0",
   "private": true,
   "type": "module",

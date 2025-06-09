@@ -30,7 +30,7 @@ export const SwiperContext = createContext<SwiperContextType | null>(null)
 export const SwiperActionContext = createContext<SwiperActionsType | null>(null)
 
 interface SwiperProps extends Omit<HTMLAttributes<HTMLDivElement>, 'onDrag'> {
-  onDrag?: (_e: any, info: PanInfo) => void
+  onDrag?: (event: PointerEvent, info: PanInfo) => void
   onSwipe?: (swipe: SwipeType) => void
   offsetBoundary?: number
   itemsPerView?: number
@@ -122,7 +122,6 @@ export const Swiper = forwardRef<SwiperRef, SwiperProps>(
         if (history) {
           setHistoryState(prevHistory => {
             const newHistory = [...prevHistory, { items, direction }]
-            console.log(newHistory)
             return newHistory.length > historyDepth + 1
               ? newHistory.slice(1)
               : newHistory
@@ -201,7 +200,6 @@ export const Swiper = forwardRef<SwiperRef, SwiperProps>(
         redo: handleRedo,
         reset: handleReset,
         disabled: historyState.length === 1,
-        ...internalRef.current,
       }),
       [handleSwipe, handleUndo, handleRedo, handleReset, historyState],
     )
