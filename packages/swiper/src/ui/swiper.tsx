@@ -25,6 +25,7 @@ import { HISTORY_DEPTH, ITEMS_PER_VIEW, OFFSET_BOUNDARY } from '../config'
 import { getInitialItems, setleaveValue } from '../lib'
 import { SwiperItem } from './swiper-item'
 import clsx from 'clsx'
+import { useUniqId } from "../lib/use-unique-id"
 
 export const SwiperContext = createContext<SwiperContextType | null>(null)
 export const SwiperActionContext = createContext<SwiperActionsType | null>(null)
@@ -243,6 +244,8 @@ export const Swiper = forwardRef<SwiperRef, SwiperProps>(
       }
     }, [dispatch])
 
+    const swiperId = useUniqId()
+
     return (
       <SwiperContext.Provider value={value}>
         <SwiperActionContext.Provider value={actions}>
@@ -257,14 +260,13 @@ export const Swiper = forwardRef<SwiperRef, SwiperProps>(
             <AnimatePresence onExitComplete={onExitComplete} initial={false}>
               {displayedItems.map((item, index) => {
                 const zIndex = items.length - index
-                const key = `swiper-item-${item.key}`
                 if (index === 0) {
                   return (
                     <SwiperItem
                       onAnimationStart={onAnimationStart}
                       id={index}
-                      zIndex={zIndex}
-                      key={key}
+                      zIndex={items.length - index}
+                      key={`${swiperId}-${item.key}`}
                     >
                       {item}
                     </SwiperItem>
@@ -274,7 +276,7 @@ export const Swiper = forwardRef<SwiperRef, SwiperProps>(
                   <div
                     style={{ zIndex }}
                     className={styles.backgroundItem}
-                    key={key}
+                    key={`${swiperId}-${item.key}`}
                     data-testid="notactive-card"
                   >
                     {item}
