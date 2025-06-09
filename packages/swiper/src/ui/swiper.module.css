@@ -1,0 +1,10 @@
+.swiper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper .notActive {
+  position: absolute;
+}
