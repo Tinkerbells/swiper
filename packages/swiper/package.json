@@ -1,5 +1,5 @@
 {
-  "name": "@your-scope/react-swiper",
+  "name": "@tinkerbells/react-swiper",
   "version": "1.0.0",
   "description": "Tinder-style swipe component for React built with Motion One",
   "main": "./dist/index.js",

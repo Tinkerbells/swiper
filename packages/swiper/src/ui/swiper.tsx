@@ -275,7 +275,7 @@ export const Swiper = forwardRef<SwiperRef, SwiperProps>(
                 return (
                   <div
                     style={{ zIndex }}
-                    className="absolute"
+                    className={styles.backgroundItem}
                     key={key}
                     data-testid="notactive-card"
                   >

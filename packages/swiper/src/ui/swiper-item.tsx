@@ -1,3 +1,4 @@
+import styles from "./swiper.module.css"
 import {
   HTMLMotionProps,
   PanInfo,
@@ -119,7 +120,7 @@ export const SwiperItem = forwardRef<HTMLDivElement, SwiperItemProps>(
             transition: { duration: 0.4, ease: easeInOut },
           }}
           data-testid="active-card"
-          className={clsx('absolute cursor-grab', className)}
+          className={clsx(styles.swiperItem, className)}
           {...props}
         >
           {cloneElement(children as ReactElement, {

@@ -5,6 +5,32 @@
   align-items: center;
 }
 
-.swiper .notActive {
+.swiperItem {
   position: absolute;
+  cursor: grab;
+}
+
+.backgroundItem {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+}
+
+.backgroundItem:nth-child(2) {
+  transform: scale(0.95);
+  opacity: 0.8;
+}
+
+.backgroundItem:nth-child(3) {
+  transform: scale(0.9);
+  opacity: 0.6;
+}
+
+.backgroundItem:nth-child(n + 4) {
+  transform: scale(0.85);
+  opacity: 0.4;
+}
+
+.disabled {
+  pointer-events: none;
 }
